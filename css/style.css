@@ -132,7 +132,35 @@ header.hero
     text-align: center;
     color: white;
 }
+.box{
+    /* padding: 10px; */
+  width: 1000px;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  /* position: absolute; */
+  margin: auto;
+  
+}
+.box2{
+    /* padding: 10px; */
+  width: 700px;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  /* position: absolute; */
+  margin: auto;
+  
+}
 
+.slide_image{
+  height: 450px;
+}
+
+.slide_image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-sizing: border-box;
+}
 footer
 {
     padding:20px 30px;
