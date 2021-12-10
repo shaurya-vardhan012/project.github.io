@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@1,500&display=swap" rel="stylesheet">
+    
     <script
       src="https://kit.fontawesome.com/993288bb11.js"
       crossorigin="anonymous"
@@ -23,7 +24,7 @@
       href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Dancing+Script&family=Poppins:wght@500&family=Yuji+Syuku&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
 
@@ -31,11 +32,11 @@
     <header class="top-bar">
       <div class="container flex align-items space-between">
         <div class="navigation flex align-items space-between">
-          <li><a href="#">HOME</a></li>
-          <li><a href="#">PRODUCTS</a></li>
-          <li><a href="#">OFFERS</a></li>
-          <li><a href="#">CONTACT US</a></li>
-          <li><a href="#">ABOUT US</a></li>
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#products">PRODUCTS</a></li>
+          <li><a href="#offers">OFFERS</a></li>
+          <li><a href="#contact">CONTACT US</a></li>
+          <li><a href="#about">ABOUT US</a></li>
         </div>
         <div class="login-register flex align-items space-between">
           <div class="login-content flex align-items space-between">
@@ -47,13 +48,13 @@
           </div>
 
           <div class="cart">
-            <a href="#"
-              ><i class="fas fa-shopping-cart" style="color: white"></i
+            <a href="php/mycart.php" target="_blank"><i class="fas fa-shopping-cart" style="color: white"></i
             ></a>
           </div>
         </div>
       </div>
     </header>
+    <a name="home"></a>
     <header class="hero">
       <div class="container align-items">
         <div class="store " style="text-align: center; font-size: 100px; padding-top:200px; margin-bottom: 0; padding-bottom: 0;" >
@@ -69,9 +70,7 @@
         </div>
       </div>
     </header>
-
-
-
+    <a name="offers"></a>
     <br><br><br>
     <ul id="autoWidth" class="cs-hidden slider">
         <li class="item-a">
@@ -124,89 +123,112 @@
 
     <br><br><br>
 
-
-
-
-
-
+  <a name="products"></a>
     <section class="content-details-2">
       <!-- <h2 style="text-align: center;font-size: 50px; padding-top:10px;font-family:cursive; color: rgb(22, 6, 73);">Latest Headphones</h2> -->
       <h2 style="text-align: center;font-size: 50px; padding-top:10px;letter-spacing: .5rem; font-family: 'Zilla Slab', serif; color: black;">Trending Iphones</h2>
-      <div class="list-container flex align-items">
-        <div class="first-product-content">
-          <div class="first-product">
-            <img src="images/products/iPhone/iphone1.jpeg">
-          </div>
-          <div class="labels flex align-items">
-            <span style="font-size: 25px;margin-bottom: 15px; font-weight: 1000;font-family: 'Fuzzy Bubbles', cursive;">APPLE iPhone 11 <br> (Red, 64 GB)</span>
-            <span class="overline flex space-between " style="font-size: 20px; margin-bottom: 20px;font-family: 'Nanum Myeongjo', serif;"><strong>₹ 49,900* &nbsp;</strong><p style="text-decoration: line-through;"> ₹51999</p></span>
-            <div class="btn-of-products">
-              <button><a href="#">Add to Cart</a></button>
+      
+      <div class="list-container flex align-items space-between">
+        
+          <form action="php/manager_cart.php" method="post">
+            <div class="first-product-content">
+              <div class="first-product">
+                <img src="images/products/iPhone/iphone1.jpeg">
+              </div>
+              <div class="labels flex align-items">
+                <span style="font-size: 25px;margin-bottom: 15px; font-weight: 1000;font-family: 'Fuzzy Bubbles', cursive;">APPLE iPhone 11 <br> (Red, 64 GB)</span>
+                <span class="overline flex space-between " style="font-size: 20px; margin-bottom: 20px;font-family: 'Nanum Myeongjo', serif;"><strong>₹ 49,900* &nbsp;</strong><p style="text-decoration: line-through;"> ₹51999</p></span>
+                <div class="btn-of-products">
+                  <button type="submit" name="add_to_card" style="color: white; font-size: 17px;">Add to Cart</button>
+                  <input type="hidden" name="item_name" value="iphone11_red">
+                  <input type="hidden" name="price" value="49900">
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="first-product-content">
-          <div class="first-product">
-            <img src="images/products/iPhone/iphone2.jpeg">
-          </div>
-          <div class="labels flex align-items">
-            <span style="font-size: 25px;margin-bottom: 15px; font-weight: 1000;font-family: 'Fuzzy Bubbles', cursive;">APPLE iPhone 12 Pro Max <br>(Gold, 512 GB)</span>
-            <span class="overline flex space-between " style="font-size: 20px; margin-bottom: 20px;font-family: 'Nanum Myeongjo', serif;"><strong>₹ 1,49,900* &nbsp;</strong><p style="text-decoration: line-through;"> ₹1,50,900</p></span>
-            <div class="btn-of-products">
-              <button><a href="#">Add to Cart</a></button>
+          </form>
+          <form action="php/manager_cart.php" method="post">
+            <div class="first-product-content">
+              <div class="first-product">
+                <img src="images/products/iPhone/iphone2.jpeg">
+              </div>
+              <div class="labels flex align-items">
+                <span style="font-size: 25px;margin-bottom: 15px; font-weight: 1000;font-family: 'Fuzzy Bubbles', cursive;">APPLE iPhone 12 Pro Max <br>(Gold, 512 GB)</span>
+                <span class="overline flex space-between " style="font-size: 20px; margin-bottom: 20px;font-family: 'Nanum Myeongjo', serif;"><strong>₹ 1,49,900* &nbsp;</strong><p style="text-decoration: line-through;"> ₹1,50,900</p></span>
+                <div class="btn-of-products">
+                  <button type="submit" name="add_to_card"  style="color: white; font-size: 17px;">Add to Cart</button>
+                  <input type="hidden" name="item_name" value="iphone12_pro_max_gold">
+                  <input type="hidden" name="price" value="149900">
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="first-product-content">
-          <div class="first-product">
-            <img src="images/products/iPhone/iphone3.jpeg" ">
-          </div>
-          <div class="labels flex align-items">
-            <span style="font-size: 25px;margin-bottom: 15px; font-weight: 1000;font-family: 'Fuzzy Bubbles', cursive;">APPLE iPhone 11 <br> (White, 64 GB)</span>
-            <span class="overline flex space-between " style="font-size: 20px; margin-bottom: 20px;font-family: 'Nanum Myeongjo', serif;"><strong>₹ 49,900* &nbsp;</strong><p style="text-decoration: line-through;"> ₹52,900</p></span>
-            <div class="btn-of-products">
-              <button><a href="#">Add to Cart</a></button>
+          </form>
+          <form action="php/manager_cart.php" method="post">
+            <div class="first-product-content">
+              <div class="first-product">
+                <img src="images/products/iPhone/iphone3.jpeg" ">
+              </div>
+              <div class="labels flex align-items">
+                <span style="font-size: 25px;margin-bottom: 15px; font-weight: 1000;font-family: 'Fuzzy Bubbles', cursive;">APPLE iPhone 11 <br> (White, 64 GB)</span>
+                <span class="overline flex space-between " style="font-size: 20px; margin-bottom: 20px;font-family: 'Nanum Myeongjo', serif;"><strong>₹ 49,900* &nbsp;</strong><p style="text-decoration: line-through;"> ₹52,900</p></span>
+                <div class="btn-of-products">
+                  <button type="submit" name="add_to_card"  style="color: white; font-size: 17px;">Add to Cart</button>
+                  <input type="hidden" name="item_name" value="iphone11_white">
+                  <input type="hidden" name="price" value="49900">
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
+          </form>
+        
       </div>
-      <div class="list-container flex align-items">
-        <div class="first-product-content">
-          <div class="first-product">
-            <img src="images/products/iPhone/iphone4.jpeg">
-          </div>
-          <div class="labels flex align-items">
-            <span style="font-size: 25px;margin-bottom: 15px; font-weight: 1000;font-family: 'Fuzzy Bubbles', cursive;">APPLE iPhone 12 <br>(Black, 64 GB)</span>
-            <span class="overline flex space-between " style="font-size: 20px; margin-bottom: 20px;font-family: 'Nanum Myeongjo', serif;"><strong>₹ 59,999* &nbsp;</strong><p style="text-decoration: line-through;"> ₹65,999</p></span>
-            <div class="btn-of-products">
-              <button><a href="#">Add to Cart</a></button>
+      <div class="list-container flex align-items space-between">
+        <form action="php/manager_cart.php" method="post">
+          <div class="first-product-content">
+            <div class="first-product">
+              <img src="images/products/iPhone/iphone4.jpeg">
+            </div>
+            <div class="labels flex align-items">
+              <span style="font-size: 25px;margin-bottom: 15px; font-weight: 1000;font-family: 'Fuzzy Bubbles', cursive;">APPLE iPhone 12 <br>(Black, 64 GB)</span>
+              <span class="overline flex space-between " style="font-size: 20px; margin-bottom: 20px;font-family: 'Nanum Myeongjo', serif;"><strong>₹ 59,999* &nbsp;</strong><p style="text-decoration: line-through;"> ₹65,999</p></span>
+              <div class="btn-of-products">
+                <button type="submit" name="add_to_card"  style="color: white; font-size: 17px;">Add to Cart</button>
+                <input type="hidden" name="item_name" value="iphone12_black">
+                <input type="hidden" name="price" value="59999">
+              </div>
             </div>
           </div>
-        </div>
-        <div class="first-product-content">
-          <div class="first-product">
-            <img src="images/products/iPhone/iphone5.jpeg">
-          </div>
-          <div class="labels flex align-items">
-            <span style="font-size: 25px;margin-bottom: 15px; font-weight: 1000;font-family: 'Fuzzy Bubbles', cursive;">APPLE iPhone 12 <br>(Green, 64 GB)</span>
-            <span class="overline flex space-between " style="font-size: 20px; margin-bottom: 20px;font-family: 'Nanum Myeongjo', serif;"><strong>₹ 59,999* &nbsp;</strong><p style="text-decoration: line-through;"> ₹65,999</p></span>
-            <div class="btn-of-products">
-              <button><a href="#">Add to Cart</a></button>
+        </form>
+        <form action="php/manager_cart.php" method="post">
+          <div class="first-product-content">
+            <div class="first-product">
+              <img src="images/products/iPhone/iphone5.jpeg">
+            </div>
+            <div class="labels flex align-items">
+              <span style="font-size: 25px;margin-bottom: 15px; font-weight: 1000;font-family: 'Fuzzy Bubbles', cursive;">APPLE iPhone 12 <br>(Green, 64 GB)</span>
+              <span class="overline flex space-between " style="font-size: 20px; margin-bottom: 20px;font-family: 'Nanum Myeongjo', serif;"><strong>₹ 59,999* &nbsp;</strong><p style="text-decoration: line-through;"> ₹65,999</p></span>
+              <div class="btn-of-products">
+                <button type="submit" name="add_to_card"  style="color: white; font-size: 17px;">Add to Cart</button>
+                <input type="hidden" name="item_name" value="iphone12_green">
+                <input type="hidden" name="price" value="59999">
+              </div>
             </div>
           </div>
-        </div>
-        <div class="first-product-content">
-          <div class="first-product">
-            <img src="images/products/iPhone/iphone6.jpeg">
-          </div>
-          <div class="labels flex align-items">
-            <span style="font-size: 25px;margin-bottom: 15px; font-weight: 1000;font-family: 'Fuzzy Bubbles', cursive;">APPLE iPhone 13 <br> (Starlight, 256 GB)</span>
-            <span class="overline flex space-between " style="font-size: 20px; margin-bottom: 20px;font-family: 'Nanum Myeongjo', serif;"><strong>₹ 89,900* &nbsp;</strong><p style="text-decoration: line-through;">₹90,900</p></span>
-            <div class="btn-of-products">
-              <button><a href="#">Add to Cart</a></button>
+        </form>
+        <form action="php/manager_cart.php" method="post">
+          <div class="first-product-content">
+            <div class="first-product">
+              <img src="images/products/iPhone/iphone6.jpeg">
+            </div>
+            <div class="labels flex align-items">
+              <span style="font-size: 25px;margin-bottom: 15px; font-weight: 1000;font-family: 'Fuzzy Bubbles', cursive;">APPLE iPhone 13 <br> (Starlight, 256 GB)</span>
+              <span class="overline flex space-between " style="font-size: 20px; margin-bottom: 20px;font-family: 'Nanum Myeongjo', serif;"><strong>₹ 89,900* &nbsp;</strong><p style="text-decoration: line-through;">₹90,900</p></span>
+              <div class="btn-of-products">
+                <button type="submit" name="add_to_card"  style="color: white; font-size: 17px;">Add to Cart</button>
+                <input type="hidden" name="item_name" value="iphone13_starlight">
+                <input type="hidden" name="price" value="89900">
+              </div>
             </div>
           </div>
-        </div>
+        </form>
       </div>
       
     </section>
@@ -215,86 +237,111 @@
     <section class="content-details">
       <!-- <h2 style="text-align: center;font-size: 50px; padding-top:10px;font-family:cursive; color: rgb(22, 6, 73);">Latest Headphones</h2> -->
       <h2 style="text-align: center;font-size: 50px; padding-top:10px;letter-spacing: .5rem; font-family: 'Zilla Slab', serif; color: white;">Latest Headphones</h2>
-      <div class="list-container flex align-items">
-        <div class="first-product-content">
-          <div class="first-product">
-            <img src="images/products/headphone/headphone1.jpeg">
-          </div>
-          <div class="labels flex align-items">
-            <span style="font-size: 25px;margin-bottom: 15px; font-weight: 1000;font-family: 'Fuzzy Bubbles', cursive;">BoAt Rockerz 400</span>
-            <span class="overline flex space-between " style="font-size: 20px; margin-bottom: 20px;font-family: 'Nanum Myeongjo', serif;"><strong>₹ 1999* &nbsp;</strong><p style="text-decoration: line-through;"> ₹2999</p></span>
-            <div class="btn-of-products">
-              <button><a href="#">Add to Cart</a></button>
+      <div class="list-container flex align-items space-between">
+        <form action="php/manager_cart.php" method="post">
+          <div class="first-product-content">
+            <div class="first-product">
+              <img src="images/products/headphone/headphone1.jpeg">
+            </div>
+            <div class="labels flex align-items">
+              <span style="font-size: 25px;margin-bottom: 15px; font-weight: 1000;font-family: 'Fuzzy Bubbles', cursive;">BoAt Rockerz 400</span>
+              <span class="overline flex space-between " style="font-size: 20px; margin-bottom: 20px;font-family: 'Nanum Myeongjo', serif;"><strong>₹ 1999* &nbsp;</strong><p style="text-decoration: line-through;"> ₹2999</p></span>
+              <div class="btn-of-products">
+                <button type="submit" name="add_to_card" style="color: black; background-color: white; font-size: 17px;">Add to Cart</button>
+                <input type="hidden" name="item_name" value="BoAt_Rockerz_400">
+                <input type="hidden" name="price" value="1999">
+              </div>
             </div>
           </div>
-        </div>
-        <div class="first-product-content">
-          <div class="first-product">
-            <img src="images/products/headphone/headphone2.jpeg">
-          </div>
-          <div class="labels flex align-items">
-            <span style="font-size: 25px;margin-bottom: 15px; font-weight: 1000;font-family: 'Fuzzy Bubbles', cursive;">BoAt Rockerz 3550</span>
-            <span class="overline flex space-between " style="font-size: 20px; margin-bottom: 20px;font-family: 'Nanum Myeongjo', serif;"><strong>₹ 999* &nbsp;</strong><p style="text-decoration: line-through;"> ₹1999</p></span>
-            <div class="btn-of-products">
-              <button><a href="#">Add to Cart</a></button>
+        </form>
+        
+        <form action="php/manager_cart.php" method="post">
+          <div class="first-product-content">
+            <div class="first-product">
+              <img src="images/products/headphone/headphone2.jpeg">
+            </div>
+            <div class="labels flex align-items">
+              <span style="font-size: 25px;margin-bottom: 15px; font-weight: 1000;font-family: 'Fuzzy Bubbles', cursive;">BoAt Rockerz 3550</span>
+              <span class="overline flex space-between " style="font-size: 20px; margin-bottom: 20px;font-family: 'Nanum Myeongjo', serif;"><strong>₹ 999* &nbsp;</strong><p style="text-decoration: line-through;"> ₹1999</p></span>
+              <div class="btn-of-products">
+                <button type="submit" name="add_to_card" style="color: black; background-color: white; font-size: 17px;">Add to Cart</button>
+                <input type="hidden" name="item_name" value="BoAt_Rockerz_3550">
+                <input type="hidden" name="price" value="999">
+              </div>
             </div>
           </div>
-        </div>
-        <div class="first-product-content">
-          <div class="first-product">
-            <img src="images/products/headphone/headphone3.jpeg" style="height: 218.938px;">
-          </div>
-          <div class="labels flex align-items">
-            <span style="font-size: 25px;margin-bottom: 15px; font-weight: 1000;font-family: 'Fuzzy Bubbles', cursive;">BoAt Rockerz Pro</span>
-            <span class="overline flex space-between " style="font-size: 20px; margin-bottom: 20px;font-family: 'Nanum Myeongjo', serif;"><strong>₹ 2999* &nbsp;</strong><p style="text-decoration: line-through;"> ₹4999</p></span>
-            <div class="btn-of-products">
-              <button><a href="#">Add to Cart</a></button>
+        </form>
+        <form action="php/manager_cart.php" method="post">
+          <div class="first-product-content">
+            <div class="first-product">
+              <img src="images/products/headphone/headphone3.jpeg" style="height: 218.938px;">
+            </div>
+            <div class="labels flex align-items">
+              <span style="font-size: 25px;margin-bottom: 15px; font-weight: 1000;font-family: 'Fuzzy Bubbles', cursive;">BoAt Rockerz Pro</span>
+              <span class="overline flex space-between " style="font-size: 20px; margin-bottom: 20px;font-family: 'Nanum Myeongjo', serif;"><strong>₹ 2999* &nbsp;</strong><p style="text-decoration: line-through;"> ₹4999</p></span>
+              <div class="btn-of-products">
+                <button type="submit" name="add_to_card" style="color: black; background-color: white; font-size: 17px;">Add to Cart</button>
+                <input type="hidden" name="item_name" value="BoAt_Rockerz_Pro">
+                <input type="hidden" name="price" value="2999">
+              </div>
             </div>
           </div>
-        </div>
+        </form>
       </div>
-      <div class="list-container flex align-items">
-        <div class="first-product-content">
-          <div class="first-product">
-            <img src="images/products/headphone/headphone5.jpeg">
-          </div>
-          <div class="labels flex align-items">
-            <span style="font-size: 25px;margin-bottom: 15px; font-weight: 1000;font-family: 'Fuzzy Bubbles', cursive;">SONY C400</span>
-            <span class="overline flex space-between " style="font-size: 20px; margin-bottom: 20px;font-family: 'Nanum Myeongjo', serif;"><strong>₹ 3,290* &nbsp;</strong><p style="text-decoration: line-through;"> ₹3990</p></span>
-            <div class="btn-of-products">
-              <button><a href="#">Add to Cart</a></button>
+      <div class="list-container flex align-items space-between">
+        <form action="php/manager_cart.php" method="post">
+          <div class="first-product-content">
+            <div class="first-product">
+              <img src="images/products/headphone/headphone5.jpeg">
+            </div>
+            <div class="labels flex align-items">
+              <span style="font-size: 25px;margin-bottom: 15px; font-weight: 1000;font-family: 'Fuzzy Bubbles', cursive;">SONY C400</span>
+              <span class="overline flex space-between " style="font-size: 20px; margin-bottom: 20px;font-family: 'Nanum Myeongjo', serif;"><strong>₹ 3,290* &nbsp;</strong><p style="text-decoration: line-through;"> ₹3990</p></span>
+              <div class="btn-of-products">
+                <button type="submit" name="add_to_card" style="color: black; background-color: white; font-size: 17px;">Add to Cart</button>
+                <input type="hidden" name="item_name" value="SONY_C400">
+                <input type="hidden" name="price" value="3290">
+              </div>
             </div>
           </div>
-        </div>
-        <div class="first-product-content">
-          <div class="first-product">
-            <img src="images/products/headphone/headphone6.jpeg">
-          </div>
-          <div class="labels flex align-items">
-            <span style="font-size: 25px;margin-bottom: 15px; font-weight: 1000;font-family: 'Fuzzy Bubbles', cursive;">SONY 310AP</span>
-            <span class="overline flex space-between " style="font-size: 20px; margin-bottom: 20px;font-family: 'Nanum Myeongjo', serif;"><strong>₹ 849* &nbsp;</strong><p style="text-decoration: line-through;"> ₹2190</p></span>
-            <div class="btn-of-products">
-              <button><a href="#">Add to Cart</a></button>
+        </form>
+        <form action="php/manager_cart.php" method="post">
+          <div class="first-product-content">
+            <div class="first-product">
+              <img src="images/products/headphone/headphone6.jpeg">
+            </div>
+            <div class="labels flex align-items">
+              <span style="font-size: 25px;margin-bottom: 15px; font-weight: 1000;font-family: 'Fuzzy Bubbles', cursive;">SONY 310AP</span>
+              <span class="overline flex space-between " style="font-size: 20px; margin-bottom: 20px;font-family: 'Nanum Myeongjo', serif;"><strong>₹ 849* &nbsp;</strong><p style="text-decoration: line-through;"> ₹2190</p></span>
+              <div class="btn-of-products">
+                <button type="submit" name="add_to_card" style="color: black; background-color: white; font-size: 17px;">Add to Cart</button>
+                <input type="hidden" name="item_name" value="SONY_310AP">
+                <input type="hidden" name="price" value="849">
+              </div>
             </div>
           </div>
-        </div>
-        <div class="first-product-content">
-          <div class="first-product">
-            <img src="images/products/headphone/headphone7.jpeg">
-          </div>
-          <div class="labels flex align-items">
-            <span style="font-size: 25px;margin-bottom: 15px; font-weight: 1000;font-family: 'Fuzzy Bubbles', cursive;">SONY WH-XB900N</span>
-            <span class="overline flex space-between " style="font-size: 20px; margin-bottom: 20px;font-family: 'Nanum Myeongjo', serif;"><strong>₹ 9,990* &nbsp;</strong><p style="text-decoration: line-through;"> ₹19990</p></span>
-            <div class="btn-of-products">
-              <button><a href="#">Add to Cart</a></button>
+        </form>
+        <form action="php/manager_cart.php" method="post">
+          <div class="first-product-content">
+            <div class="first-product">
+              <img src="images/products/headphone/headphone7.jpeg">
+            </div>
+            <div class="labels flex align-items">
+              <span style="font-size: 25px;margin-bottom: 15px; font-weight: 1000;font-family: 'Fuzzy Bubbles', cursive;">SONY WH-XB900N</span>
+              <span class="overline flex space-between " style="font-size: 20px; margin-bottom: 20px;font-family: 'Nanum Myeongjo', serif;"><strong>₹ 9,990* &nbsp;</strong><p style="text-decoration: line-through;"> ₹19990</p></span>
+              <div class="btn-of-products">
+                <button type="submit" name="add_to_card" style="color: black; background-color: white; font-size: 17px;">Add to Cart</button>
+                <input type="hidden" name="item_name" value="SONY_WH-XB900N">
+                <input type="hidden" name="price" value="9990">
+              </div>
             </div>
           </div>
-        </div>
+        </form>
       </div>
       
     </section>
     
-
+ <a name="contact"></a>
     <footer>
       <div class="foot">
         <div class="item" id="class1">
@@ -329,7 +376,6 @@
         </div>
       </div>
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/typed.js"></script>
     <script>
@@ -340,7 +386,8 @@
         loop: true,
       });
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                                                  
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script type="text/javascript">  
 
 $('.slider').slick({
